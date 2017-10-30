@@ -6,14 +6,14 @@ using System.Windows.Input;
 
 namespace FirstApp
 {
-   public class MainViewModel
+   public class MainViewModel: INotifyPropertyChanged
    {
        public ObservableCollection<SuperNode> _directories;
        private ObservableCollection<SuperNode> _nodes;
-       private SuperNode _selectNodeListView;
+       private SuperNode _selectNodeTreeView;
        private SuperNode _selectNodeCombobox;
 
-        private ICommand _selectedCommnad;
+       private ICommand _selectedCommnad;
        public ICommand SelectedCommand
        {
            get
@@ -21,7 +21,16 @@ namespace FirstApp
                return _selectedCommnad ??
                       (_selectedCommnad = new RelayCommand(obj =>
                       {
-                          FindElement(obj);
+
+                          if (obj != null)
+                          {
+                              FindElement(obj);
+                          }
+                          else
+                          {
+                              FindElement();
+                          }
+                          
                       }));
            }
        }
@@ -100,13 +109,13 @@ namespace FirstApp
         #endregion
 
 
-        public SuperNode SelectNodeListView
+        public SuperNode SelectNodeTreeView
         {
-            get { return _selectNodeListView; }
+            get { return _selectNodeTreeView; }
             set
             {
-                _selectNodeListView = value; 
-                OnPropertyChanged("SelectNodeListView");
+                _selectNodeTreeView = value; 
+                OnPropertyChanged("SelectNodeTreeView");
             }
         }
        public SuperNode SelectNodeCombobox
@@ -121,6 +130,16 @@ namespace FirstApp
        }
 
 
+       public void FindElement()
+       {
+
+            //Поиск в директории и равно свойству для комбобокса
+           if (SelectNodeTreeView != null)
+           {
+               SelectNodeCombobox = Nodes.FirstOrDefault(e => e.Name == SelectNodeTreeView.Name);
+            }
+        }
+
         public void FindElement(object obj)
        {
            //Поиск ноды и подставление в селект для комбобокса
@@ -128,10 +147,15 @@ namespace FirstApp
             //Поиск в директории и равно свойству для комбобокса
            if (selectNode != null)
            {
-              
-               SelectNodeCombobox = Nodes.FirstOrDefault(e => e.Name == selectNode.Name);
-           }
-       }
+
+                //SelectNodeCombobox = Nodes.FirstOrDefault(e => e.Name == selectNode.Name);
+                //очистка списка в комбобоксе
+               Nodes.Clear();
+               Nodes.Add(selectNode);
+
+               SelectNodeCombobox = selectNode;
+            }
+        }
 
         public MainViewModel()
         {
@@ -157,12 +181,12 @@ namespace FirstApp
             Directories.Add(n3);
 
             Nodes = new ObservableCollection<SuperNode>();
-            Nodes.Add(n1);
-            Nodes.Add(n2);
-            Nodes.Add(n3);
-            Nodes.Add(n4);
-            Nodes.Add(n5);
-            Nodes.Add(n6);
+            //Nodes.Add(n1);
+            //Nodes.Add(n2);
+            //Nodes.Add(n3);
+            //Nodes.Add(n4);
+            //Nodes.Add(n5);
+            //Nodes.Add(n6);
         }
 
 

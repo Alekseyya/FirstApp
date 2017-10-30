@@ -56,3 +56,6 @@ C:\Temp\111\222\FirstApp\obj\Debug\TexBlock.baml
 C:\Temp\111\222\FirstApp\obj\Debug\FirstApp.g.resources
 C:\Temp\111\222\FirstApp\obj\Debug\FirstApp.Properties.Resources.resources
 C:\Temp\111\222\FirstApp\obj\Debug\FirstApp.csproj.GenerateResource.Cache
+C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\ComboTree.g.cs
+C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\ComboTree.baml
