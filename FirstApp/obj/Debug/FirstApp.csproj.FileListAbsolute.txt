@@ -12,10 +12,6 @@ C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\FirstApp.Properties.Resources.resou
 C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\FirstApp.csproj.GenerateResource.Cache
 C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\FirstApp.exe
 C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\FirstApp.pdb
-C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\TexBlock.g.cs
-C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\TexBlock.baml
-C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\ComboboxTest.g.cs
-C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\ComboboxTest.baml
 C:\Work\Andersen\FirstApp\FirstApp\bin\Debug\System.Windows.Interactivity.dll
 C:\Work\Andersen\FirstApp\FirstApp\bin\Debug\de\System.Windows.Interactivity.resources.dll
 C:\Work\Andersen\FirstApp\FirstApp\bin\Debug\en\System.Windows.Interactivity.resources.dll
@@ -59,3 +55,5 @@ C:\Temp\111\222\FirstApp\obj\Debug\FirstApp.csproj.GenerateResource.Cache
 C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\ComboTree.g.cs
 C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\ComboTree.baml
+C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\App.baml
+C:\Work\Andersen\FirstApp\FirstApp\obj\Debug\ComboboxStyle.baml
